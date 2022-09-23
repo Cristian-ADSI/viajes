@@ -1,0 +1,9 @@
+@mixin page-spacing {
+    padding: 0 10%;
+}
+
+@mixin d-flex($align: center, $justify: center) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}

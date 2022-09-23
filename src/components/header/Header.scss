@@ -1,0 +1,34 @@
+@import "../../sass/partials/mixins";
+@import "../../sass/partials/variables";
+header {
+    width: 100%;
+    @include page-spacing();
+    nav {
+        padding: 15px 0;
+        @include d-flex(center, flex-end);
+        .utilities {
+            @include d-flex();
+            gap: 20px;
+            button {
+                @include d-flex();
+                background-color: transparent;
+                border: none;
+                color: $c-links;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 16px;
+                gap: 10px;
+                outline: none;
+                span{
+                    font-size: 20px; 
+                }
+            }
+            span {
+                color: $c-links;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+}
