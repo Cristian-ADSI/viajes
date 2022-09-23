@@ -22,7 +22,7 @@ const Search = () => {
   }, []);
 
   useEffect(() => {
-    console.log(hotels.results);
+    // console.log(hotels.list);
   }, [hotels]);
 
   return (
@@ -30,9 +30,12 @@ const Search = () => {
       <Header />
       <main>
         <section className="results">
+          <p className="total-count">
+            {hotels.totalCount && hotels.totalCount + ' propiedades'}
+          </p>
+          <h2 className="destination-name">{hotels.header && hotels.header}</h2>
           {isAllParamas ? (
-            hotels.results &&
-            hotels.results.map((hotel) => <Card/>)
+            hotels.list && hotels.list.map((hotel) => <Card />)
           ) : (
             <h2 className="error">Oops! Ocurrio un error inesperperado</h2>
           )}

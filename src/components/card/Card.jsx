@@ -1,6 +1,6 @@
 import React from 'react';
 import './Card.scss';
-const Card = () => {
+const Card = ({totalCount,list}) => {
   return (
     <section className="card">
       <aside className="card_image">
