@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
+import AppRouter from './AppRouter';
 
-import Search from './pages/Search';
 import './sass/app.scss';
 
 function App() {
   return (
-    <Fragment className="App">
-      <Search/>
+    <Fragment >
+      <AppRouter /> 
     </Fragment>
   );
 }

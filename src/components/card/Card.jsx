@@ -20,7 +20,7 @@ const Card = () => {
           <article className="details">
             <p className="refund">Totalmente reembolsable</p>
             <p className="seals">
-              <span class="material-symbols-outlined">clear_night</span>
+              <span className="material-symbols-outlined">clear_night</span>
               Acumula sellos
             </p>
             <p className="opinions">
@@ -30,7 +30,7 @@ const Card = () => {
 
           <article className="price">
             <p className="tag">
-              <span class="material-symbols-outlined">sell</span>
+              <span className="material-symbols-outlined">sell</span>
               Precio secreto disponible
             </p>
             
