@@ -1,5 +1,5 @@
-@mixin page-spacing {
-    padding: 0 10%;
+@mixin page-spacing($Y_space: 0, $X_Space: 5% ) {
+    padding: $Y_space $X_Space;
 }
 
 @mixin d-flex($align: center, $justify: center) {

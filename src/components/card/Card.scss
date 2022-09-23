@@ -1,0 +1,115 @@
+@import "../../sass/partials/mixins";
+@import "../../sass/partials/variables";
+
+.card {
+    @include d-flex(flex-start, flex-start);
+    width: 90%;
+    height: 230px;
+    background-color: $c-white;
+    &_image {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 350px;
+        img {
+            width: 100%;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &_content {
+        @include d-flex(space-between, space-between);
+        flex-direction: column;
+
+        padding: 15px;
+        height: 100%;
+        width: calc(100% - 350px);
+        .title {
+            .name {
+                font-family: "Montserrat", sans-serif;
+                color: $c-text;
+                font-size: 20px;
+                text-transform: capitalize;
+            }
+            .location {
+                color: $c-text-70;
+                text-transform: capitalize;
+            }
+        }
+
+        .info {
+            @include d-flex(center, space-between);
+            .details {
+                .refund {
+                    color: $c-success;
+                }
+                .seals {
+                    @include d-flex(center, flex-start);
+                    color: $c-text-70;
+                    gap: 5px;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    .material-symbols-outlined {
+                        display: block;
+
+                        background-color: $c-main;
+                        border-radius: 8px;
+                        color: $c-white;
+                        font-size: 14px;
+                        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+
+                        height: 22px;
+                        width: 22px;
+                        padding: 3px;
+                    }
+                }
+                .opinions {
+                    span {
+                        color: $c-text;
+                        font-weight: 600;
+                        padding-right: 5px;
+                    }
+                    color: $c-text-70;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+
+            .price {
+                text-align: right;
+                .tag {
+                    font-size: 14px;
+                    .material-symbols-outlined {
+                        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+                    }
+
+                    @include d-flex(center, flex-start);
+                    gap: 5px;
+
+                    background-color: $c-main;
+                    border-radius: 8px;
+                    color: $c-white;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    padding: 5px 10px;
+                }
+                &_day{
+                    color: $c-text;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 30px;
+                    letter-spacing: 1px;
+                    line-height: 24px;
+                    margin: 10px 0 3px 0;
+                }
+                &_total{
+                    color: $c-text-70;
+                    font-size: 14px; 
+                }
+            }
+        }
+    }
+}

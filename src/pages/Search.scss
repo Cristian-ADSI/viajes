@@ -1,0 +1,11 @@
+@import "../sass/partials/mixins";
+@import "../sass/partials/variables";
+
+main {
+    @include page-spacing();
+    .results {
+        padding: 30px;
+        background-color: $c-bg-gray;
+        height: auto;
+    }
+}
