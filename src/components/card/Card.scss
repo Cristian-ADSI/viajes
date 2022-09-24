@@ -98,7 +98,7 @@
                     font-weight: 500;
                     padding: 5px 10px;
                 }
-                &_day{
+                &_day {
                     color: $c-text;
                     font-family: "Montserrat", sans-serif;
                     font-size: 28px;
@@ -106,9 +106,57 @@
                     line-height: 24px;
                     margin: 10px 0 3px 0;
                 }
-                &_total{
+                &_total {
                     color: $c-text-70;
-                    font-size: 14px; 
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @include tablet {
+        width: 100%;
+        flex-direction: column;
+        padding: 30px;
+        height: auto;
+
+        &_image {
+            width: 100%;
+            height: auto;
+            img {
+                border-radius: 3px;
+                position: relative;
+                top: unset;
+                left: unset;
+                transform: translate(0, 0);
+            }
+        }
+        &_content {
+            width: 100%;
+        }
+    }
+
+    @include semi-tablet {
+        &_content {
+            .title {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .info {
+                @include d-flex(center, center);
+                flex-direction: column;
+                gap: 15px;
+
+                .details {
+                    .refund {
+                        text-align: center;
+                    }
+                    .seals {
+                        @include d-flex();
+                    }
+                    .opinions {
+                        text-align: center;
+                    }
                 }
             }
         }

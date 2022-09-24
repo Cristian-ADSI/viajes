@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getHotelDays, validateParams } from '../utilities/validateFunctions';
+import { getHotelDays, validateParams } from '../utilities/toolFunctions';
 
 import Card from '../components/card/Card';
 import Header from '../components/header/Header';

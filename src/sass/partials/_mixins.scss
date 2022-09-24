@@ -1,4 +1,4 @@
-@mixin page-spacing($Y_space: 0, $X_Space: 5% ) {
+@mixin page-spacing($Y_space: 0, $X_Space: 5%) {
     padding: $Y_space $X_Space;
 }
 
@@ -7,3 +7,15 @@
     align-items: $align;
     justify-content: $justify;
 }
+
+@mixin tablet {
+    @media only screen and ( max-width: 920.98px ) {
+        @content;
+    }
+}
+@mixin semi-tablet {
+    @media only screen and ( max-width: 640.98px ) {
+        @content;
+    }
+}
+
