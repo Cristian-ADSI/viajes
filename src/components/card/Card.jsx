@@ -1,19 +1,29 @@
 import React from 'react';
 import './Card.scss';
-const Card = ({totalCount,list}) => {
+const Card = ({ hotel, hotelDays }) => {
+  const name = hotel.name;
+  const image = hotel.optimizedThumbUrls.srpDesktop;
+  const locality = hotel.address.locality;
+  const rating = hotel.guestReviews.rating;
+  const totalReviews = hotel.guestReviews.total;
+  const exactCurrent = hotel.ratePlan.price.exactCurrent;
+
+  const dayPrice = new Intl.NumberFormat('en-Us', {style: 'currency',currency: 'COP',})
+  .format(parseInt(exactCurrent * 4438.51));
+
+  const totalPrice = new Intl.NumberFormat('en-Us', {style: 'currency',currency: 'COP',})
+  .format(parseInt(exactCurrent * 4438.51)*hotelDays);
+
   return (
     <section className="card">
       <aside className="card_image">
-        <img
-          src="https://media-cdn.tripadvisor.com/media/photo-s/1a/34/26/e0/hotel-lobby.jpg"
-          alt="Loby"
-        />
+        <img src={`${image}`} alt={`${name}`} />
       </aside>
 
       <aside className="card_content">
         <article className="title">
-          <h3 className="name">miami international airport hotel</h3>
-          <p className="location">miami</p>
+          <h3 className="name">{name}</h3>
+          <p className="location">{locality}</p>
         </article>
 
         <article className="info">
@@ -24,7 +34,7 @@ const Card = ({totalCount,list}) => {
               Acumula sellos
             </p>
             <p className="opinions">
-              <span>6,8/10</span>(3.452 ipiniones)
+              <span>{rating}/10</span>({totalReviews} opiniones)
             </p>
           </article>
 
@@ -33,9 +43,9 @@ const Card = ({totalCount,list}) => {
               <span className="material-symbols-outlined">sell</span>
               Precio secreto disponible
             </p>
-            
-            <h3 className='price_day'>COP 916.118</h3>
-            <span className='price_total'>COP 2.070.427 en total</span>
+
+            <h3 className="price_day">{dayPrice}</h3>
+            <span className="price_total">{totalPrice} en total</span>
           </article>
         </article>
       </aside>

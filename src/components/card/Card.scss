@@ -4,14 +4,14 @@
 .card {
     @include d-flex(flex-start, flex-start);
     width: 90%;
-    height: 230px;
+    height: 200px;
     background-color: $c-white;
     margin-bottom: 30px;
     &_image {
         height: 100%;
         overflow: hidden;
         position: relative;
-        width: 350px;
+        width: 360px;
         img {
             width: 100%;
 
@@ -101,7 +101,7 @@
                 &_day{
                     color: $c-text;
                     font-family: "Montserrat", sans-serif;
-                    font-size: 30px;
+                    font-size: 28px;
                     letter-spacing: 1px;
                     line-height: 24px;
                     margin: 10px 0 3px 0;

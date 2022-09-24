@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { validateParams } from '../utilities/validateFunctions';
+import { getHotelDays, validateParams } from '../utilities/validateFunctions';
 
 import Card from '../components/card/Card';
 import Header from '../components/header/Header';
@@ -11,9 +11,12 @@ import './Search.scss';
 
 const Search = () => {
   const { search } = useLocation();
+
   let params = new URLSearchParams(search);
 
   const isAllParamas = validateParams(params);
+
+  const hotelDays = getHotelDays(params);
 
   const [hotels, getHotels] = useGetHotels();
 
@@ -21,9 +24,6 @@ const Search = () => {
     getHotels(search);
   }, []);
 
-  useEffect(() => {
-    // console.log(hotels.list);
-  }, [hotels]);
 
   return (
     <Fragment>
@@ -35,7 +35,7 @@ const Search = () => {
           </p>
           <h2 className="destination-name">{hotels.header && hotels.header}</h2>
           {isAllParamas ? (
-            hotels.list && hotels.list.map((hotel) => <Card />)
+            hotels.list && hotels.list.map((hotel) => <Card hotel={hotel} hotelDays={hotelDays} key={hotel.id}/>)
           ) : (
             <h2 className="error">Oops! Ocurrio un error inesperperado</h2>
           )}
