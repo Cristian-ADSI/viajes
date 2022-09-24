@@ -1,0 +1,27 @@
+@import "../sass/partials/mixins";
+@import "../sass/partials/variables";
+
+main {
+    @include page-spacing();
+    .total-count {
+        color: $c-text-70;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+    }
+    .destination-name {
+        color: $c-text; 
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 20px;
+    }
+    .results {
+        padding: 30px;
+        background-color: $c-bg-gray;
+        height: auto;
+        .error {
+            color: $c-text-70;
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+}
