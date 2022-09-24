@@ -34,6 +34,36 @@ https://cristianotero.com.co/travel/
 By default  you need pass a list of params for search. If you don't, it will load a page with an error message.
 ![image](https://user-images.githubusercontent.com/61100797/192101328-5a864a97-9bd3-444d-9ce7-d4dbde674e0d.png)
 
+The list of parameters required are the folowings:
+
+destinationId = (number)
+pageNumber = (number)
+pageSize = (number)
+checkIn = (yyyy-mm-dd)
+&checkOut= (yyyy-mm-dd)
+&adults1= (number)
+
+a template of this paramas in the URL are the folowing:
+
+?destinationId=1506246&pageNumber=1&pageSize=2&checkIn=2022-11-11&checkOut=2022-12-11&adults1=2
+
+you need concatenate tis template parameters with the  root URL like this:
+
+https://cristianotero.com.co/travel/?destinationId=1506246&pageNumber=1&pageSize=2&checkIn=2022-11-11&checkOut=2022-12-11&adults1=2
+
+And you will have the folowing result:
+
+![image](https://user-images.githubusercontent.com/61100797/192101630-cad8c73a-a4d1-477a-8759-df2959ddfd36.png)
+
+
+I had some issues handelig the router because there are a 6.4 new version of React Router Dom and im reading the DOCS yet
+you can check mor about it here:
+
+https://reactrouter.com/en/main
+
+If you want more information about of the API of this proyect go to the nex URL for oficial information
+
+https://rapidapi.com/apidojo/api/hotels4
 
 
 
