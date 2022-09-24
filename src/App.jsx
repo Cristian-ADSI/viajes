@@ -1,11 +1,12 @@
 import { Fragment } from 'react';
-import Header from './components/header/Header';
+import AppRouter from './AppRouter';
+
 import './sass/app.scss';
 
 function App() {
   return (
-    <Fragment className="App">
-      <Header /> 
+    <Fragment >
+      <AppRouter /> 
     </Fragment>
   );
 }

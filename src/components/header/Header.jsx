@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="content">
         <article className="utilities">
           <button type="button">
-            <span class="material-symbols-outlined">public</span>
+            <span className="material-symbols-outlined">public</span>
             Español
           </button>
           <span>Iniciar sesion</span>
