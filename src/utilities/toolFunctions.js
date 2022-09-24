@@ -1,27 +1,16 @@
 const validateParams = (params) => {
-  const destinationId = params.get('destinationId')
-    ? params.get('destinationId').trim()
-    : null;
 
-  const pageNumber = params.get('pageNumber').trim()
-    ? params.get('pageNumber').trim()
-    : null;
+  const destinationId = params.get('destinationId') ? params.get('destinationId').trim() : null;
 
-  const pageSize = params.get('pageSize').trim()
-    ? params.get('pageSize').trim()
-    : null;
+  const pageNumber = params.get('pageNumber') ? params.get('pageNumber').trim() : null;
 
-  const checkIn = params.get('checkIn').trim()
-    ? params.get('checkIn').trim()
-    : null;
+  const pageSize = params.get('pageSize') ? params.get('pageSize').trim() : null;
 
-  const checkOut = params.get('checkOut').trim()
-    ? params.get('checkOut').trim()
-    : null;
+  const checkIn = params.get('checkIn') ? params.get('checkIn').trim() : null;
 
-  const adults1 = params.get('adults1').trim()
-    ? params.get('adults1').trim()
-    : null;
+  const checkOut = params.get('checkOut') ? params.get('checkOut').trim() : null;
+
+  const adults1 = params.get('adults1') ? params.get('adults1').trim() : null;
 
   if (
     destinationId &&
@@ -33,18 +22,15 @@ const validateParams = (params) => {
   ) {
     return true;
   } else {
+    console.log('no estan completos');
     return false;
   }
 };
 
 const getHotelDays = (params) => {
-  const checkIn = params.get('checkIn').trim()
-    ? params.get('checkIn').trim()
-    : '000-00-00';
+  const checkIn = params.get('checkIn') ? params.get('checkIn').trim() : '000-00-00';
 
-  const checkOut = params.get('checkOut').trim()
-    ? params.get('checkOut').trim()
-    : '000-00-00';
+  const checkOut = params.get('checkOut') ? params.get('checkOut').trim() : '000-00-00';
 
   const startDate = new Date(checkIn);
   const finishDate = new Date(checkOut);
@@ -56,4 +42,4 @@ const getHotelDays = (params) => {
   return Math.floor(dayDiference);
 };
 
-export { validateParams , getHotelDays};
+export { validateParams, getHotelDays };

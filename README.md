@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Getting Started with Clone the  App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## What do you need?
+   you need install a stable Node js  and NPM version, you cand download both from here
+   https://nodejs.org/es/
+   download the LTS version
 
-In the project directory, you can run:
+## How to get this project?
+   01. you can clone this project from your windows console, git Bash or from the console of your code editor with the following command
+   
+       git clone https://github.com/Cristian-ADSI/viajes.git
+      
+   02. In the project directory, you must install all dependencies and packages of the project, run the next comand:
+   
+       npm install
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### How to run the proyect?
+    You can run runs the app in the development mode with the flow comand:
+    
+    npm start
+    
+    Its open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+# App in production
+This aplication are deployed for production in the next URL:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://cristianotero.com.co/travel/
 
-### `npm run build`
+By default  you need to pass a list of parameters for search. If you don't, it will load a page with an error message.
+![image](https://user-images.githubusercontent.com/61100797/192101328-5a864a97-9bd3-444d-9ce7-d4dbde674e0d.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The list of parameters required are the folowings:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+destinationId = (number)
+pageNumber = (number)
+pageSize = (number)
+checkIn = (yyyy-mm-dd)
+&checkOut= (yyyy-mm-dd)
+&adults1= (number)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+a template of this paramaters in the URL are the folowing:
 
-### `npm run eject`
+?destinationId=1506246&pageNumber=1&pageSize=2&checkIn=2022-11-11&checkOut=2022-12-11&adults1=2
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+you need concatenate tis template parameters with the  root URL like this:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://cristianotero.com.co/travel/?destinationId=1506246&pageNumber=1&pageSize=2&checkIn=2022-11-11&checkOut=2022-12-11&adults1=2
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+And you will have the folowing result:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](https://user-images.githubusercontent.com/61100797/192101630-cad8c73a-a4d1-477a-8759-df2959ddfd36.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I had some issues handeling the router because there are a 6.4 new version of React Router Dom and im reading the DOCS yet
+you can check mor about it here:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://reactrouter.com/en/main
 
-### Code Splitting
+If you want more information about of the API of this proyect go to the nex URL for oficial information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+https://rapidapi.com/apidojo/api/hotels4
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

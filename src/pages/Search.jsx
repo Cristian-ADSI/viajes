@@ -11,10 +11,11 @@ import './Search.scss';
 
 const Search = () => {
   const { search } = useLocation();
-
+  
   let params = new URLSearchParams(search);
 
-  const isAllParamas = validateParams(params);
+  const isAllParams = validateParams(params);
+  
 
   const hotelDays = getHotelDays(params);
 
@@ -34,7 +35,8 @@ const Search = () => {
             {hotels.totalCount && hotels.totalCount + ' propiedades'}
           </p>
           <h2 className="destination-name">{hotels.header && hotels.header}</h2>
-          {isAllParamas ? (
+
+          {isAllParams ? (
             hotels.list && hotels.list.map((hotel) => <Card hotel={hotel} hotelDays={hotelDays} key={hotel.id}/>)
           ) : (
             <h2 className="error">Oops! Ocurrio un error inesperperado</h2>
